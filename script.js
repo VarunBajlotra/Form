@@ -44,7 +44,7 @@ btn2.on('click',function(){
 });
 
 let add_count = 1;
-document.getElementById("hideifOne").style.visibility = "hidden";
+// document.getElementById("hideifOne").style.visibility = "hidden";
 console.log(document.getElementById("hideifOne"));
 
 function add_education()
@@ -68,3 +68,9 @@ function remEdu(event)
        document.getElementById("hideifOne").style.visibility = "hidden";
 }
 
+
+$('.move').on('click',function(){
+    $('.spann').hide();
+    $(this).nextAll('span:first').show();
+    console.log('Success!!');
+});
