@@ -23,10 +23,11 @@ function disable(event)
 //Work-Experience script End//
     
 $('#one').show();
+$('h5').css({"color": "grey"});
+$('#ONE').css({"color": "rgb(74, 74, 216)"});
 $('#two').hide();
 $('#three').hide();
 $('#four').hide();
-
 
 let btn1 = $(".Next");
 let btn2 = $(".Back");
@@ -35,12 +36,16 @@ btn1.on('click',function(){
     let x = $(this).parent().parent();
     x.hide();
     x.nextAll('span:first').show();
+    $('h5').css({"color": "grey"});
+    x.nextAll('a:first').children().css({"color": "blue"})
 });
 
 btn2.on('click',function(){
     let y = $(this).parent().parent();
     y.hide();
     y.prevAll('span:first').show();
+    $('h5').css({"color": "grey"});
+    y.prevAll('span:first').prevAll('a:first').children().css({"color": "blue"})
 });
 
 let add_count = 1;
@@ -72,5 +77,7 @@ function remEdu(event)
 $('.move').on('click',function(){
     $('.spann').hide();
     $(this).nextAll('span:first').show();
+    $('h5').css({"color": "grey"});
+    $(this).children().css({"color": "rgb(74, 74, 216)"});
     console.log('Success!!');
 });
